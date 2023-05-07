@@ -5,12 +5,14 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float movementSpeed = 15f;
+
+    public AudioSource walkAudio;
     
     public CharacterController characterController;
     // Start is called before the first frame update
     void Start()
     {
-        
+        walkAudio = GameObject.Find("walking Audio").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
